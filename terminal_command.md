@@ -10,7 +10,6 @@
 
 `source install/setup.bash`
 
-
 wget http://fishros.com/install -O fishros && . fishros
 
 # Git 基础操作全流程笔记 (ROS2 项目实战版)
