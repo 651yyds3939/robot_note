@@ -1,6 +1,6 @@
-# 强化学习案例gym版
+# 强化学习案例gym版 训练基本完成，未部署
 
-- [强化学习案例gym版](#强化学习案例gym版)
+- [强化学习案例gym版 训练基本完成，未部署](#强化学习案例gym版-训练基本完成未部署)
   - [概述](#概述)
   - [效果展示](#效果展示)
   - [部署](#部署)
@@ -9,8 +9,7 @@
       - [**检查 `launch` 文件，文件位置为`/home/lab/kuavo-rl-opensource/kuavo-robot-deploy/src/humanoid-control/humanoid_controllers/launch`。**](#检查-launch-文件文件位置为homelabkuavo-rl-opensourcekuavo-robot-deploysrchumanoid-controlhumanoid_controllerslaunch)
       - [**检查 `skw_rl_param.info` 文件，文件位置为`/home/lab/kuavo-rl-opensource/kuavo-robot-deploy/src/humanoid-control/humanoid_controllers/config/kuavo_v42/rl`**:](#检查-skw_rl_paraminfo-文件文件位置为homelabkuavo-rl-opensourcekuavo-robot-deploysrchumanoid-controlhumanoid_controllersconfigkuavo_v42rl)
     - [H12遥控器控制说明](#h12遥控器控制说明)
-    - [程序启动及控制说明](#程序启动及控制说明)
-      - [启动说明](#启动说明)
+    - [程序启动](#程序启动)
     - [电机控制话题说明](#电机控制话题说明)
       - [1. 控制指令输出方式](#1-控制指令输出方式)
       - [2. 控制模式选择](#2-控制模式选择)

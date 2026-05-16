@@ -1,11 +1,13 @@
-## 搬箱子案例运行步骤：
+## 搬箱子案例运行步骤： 尝试过，但没有搬箱子节点
 
 ### 编译：  
 ```commandline
 cd ~/kuavo-ros-control
 catkin build  humanoid_controllers
 catkin build  humanoid_plan_arm_trajectory kuavo_sdk
-catkin build roban2_move_boxes kuavo_msgs
+ln -s /root/kuavo_ws/kuavo_ros_application/src/roban2_move_boxes /root/kuavo_ws/src/
+ln -s /root/kuavo_ws/kuavo_ros_application/src/kuavo_msgs /root/kuavo_ws/src/
+catkin build roban2_move_boxes kuavo_msgs --force-cmake
 ```
 ### 启动：  在 2 个终端分别打开  
 

@@ -105,7 +105,8 @@ python3 -m pip install numpy==1.22.2 requests==2.31.0
    - 该案例所使用的对话大模型为深度求索(deepseek)推出的deepseek-chat： https://www.deepseek.com/
      - 获取DeepSeek API Key：
        - https://platform.deepseek.com/usage
-       - 充值，获取API Key    
+       - 充值，获取API Key  
+       - sk-e2e27e97eb354b3f8c21f9e2c53abba8  
        - 将程序`~/kuavo_ros_application/src/kuavo_large_model/kuavo_deepseek_model/rtasr_python3_demo.py`第177行的api-key替换成获取到的即可
 
 ## 执行
