@@ -7,7 +7,7 @@
 ## 一、 Docker 核心基石：Namespaces 与 Cgroups
 
 *   **Namespaces（命名空间）**：Docker 的“障眼法”。它让容器内的进程以为自己拥有独立的 PID（进程号 1）、独立的网络接口和独立的文件系统。你在 Docker 里看到的 `/`（根目录），其实只是宿主机硬盘深处（`/var/lib/docker/overlay2/`）的一个普通文件夹。
-*   **Cgroups（控制组）**：Docker 的“紧箍咒”。它限制这个容器最多只能用宿主机（如 R9000P）多少 CPU 核心和多少内存。
+*   **Cgroups（控制组）**：Docker 的“紧箍咒”。它限制这个容器最多只能用宿主机（如 笔记本电脑有多少 CPU 核心和多少内存。
 
 ---
 
@@ -133,7 +133,7 @@ xhost +local:docker
 ./docker/run.sh
 
 # B. 【推荐】手动全功率模式（暴力拆解挂载逻辑，强制开启 GPU 和显示投影）
-docker run -it --rm \
+docker run -it  \
     --name kuavo_container \
     --gpus all \
     --privileged \
@@ -151,6 +151,12 @@ docker run -it --rm \
 当容器已存在但处于后台时，无需重新 `run`，直接唤醒。
 
 ```bash
+#查看已有哪些容器
+docker ps -a
+
+#查看每个容器占用的空间
+docker ps -as
+
 # 唤醒已停止的容器
 docker start kuavo_container
 
@@ -160,6 +166,9 @@ docker exec -it kuavo_container zsh
 # (备用) 以 Bash 身份钻入
 docker exec -it kuavo_container /bin/bash
 
+#删除某个容器，需要先查看已有容器的名字
+docker rm 容器名如：6211bcba5b9e
+
 ```
 
 
@@ -168,6 +177,8 @@ docker exec -it kuavo_container /bin/bash
 clash打开允许局域网连接
 export http_proxy=http://172.17.0.1:7890
 export https_proxy=http://172.17.0.1:7890
+
+unset http_proxy https_proxy
 ```
 
 ---

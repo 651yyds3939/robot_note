@@ -154,3 +154,25 @@ sudo find ~/ -iname "*READ*" -ls
 
 # 6. 查找最近 60 分钟内被修改过的所有文件（破案专用）
 find ~/ -mmin -60 -type f
+
+
+
+
+## 1. 源码与代码仓库获取 (Git & VCS)
+机器人项目经常包含大量子模块，必须掌握递归克隆。
+
+```bash
+# --- Git 基础 ---
+git clone <url>                # 克隆仓库
+git pull origin <branch>       # 拉取最新代码
+git clone --recursive <url>    # 递归克隆（带子模块，机器人开发常用）
+
+# --- 强制对齐远程仓库 (本地乱了时的救命稻草) ---
+git fetch --all
+git reset --hard origin/main   # 放弃所有本地修改，强制同步远程
+
+# --- VCS (多仓库管理，ROS必备) ---
+vcs import src < my.repos      # 批量导入 .repos 文件中的仓库
+vcs pull src                   # 批量拉取所有仓库更新
+
+```
